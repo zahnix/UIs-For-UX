@@ -1,0 +1,93 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  background-color: #1c1f2b;
+  height: 100vh;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 2.5rem;
+}
+
+#btns-container{
+  display: flex;
+  gap: 2rem;
+}
+
+
+.card{
+  margin: 0 auto;
+  padding: 2rem;
+  width: 300px;
+  background-color: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  line-height: 1.5rem;
+  color: #ccc;
+  position: relative;
+}
+
+@property --angle{
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after, .card::before{
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  background-image: conic-gradient(from var(--angle), transparent 80%, #00f);
+  padding: .9rem;
+  top: 0%;
+  left: 0%;
+  border-radius: 10px;
+  translate: -2.5% -2.5%;
+  animation: 3s spin linear infinite;
+}
+
+.card::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+
+@keyframes spin{
+  0%{
+    --angle: 0deg;
+  }
+  100%{
+    --angle: 360deg;
+  }
+}
+
+img{
+  max-width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+button{
+  padding: 0.5rem 1rem;
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 1rem 0;
+}
+
+button:hover{
+  background-color: #f55;
+}
