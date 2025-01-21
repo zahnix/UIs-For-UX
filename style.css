@@ -7,8 +7,37 @@
 body{
   font-family: 'Lato', sans-serif;
   font-size: 1rem;
-  background-color: #1c1f2b;
+  background-color: #fff;
   height: 100vh;
+}
+
+h1{
+  text-align: center;
+  margin-top: 2rem;
+  color: #000;
+}
+
+h2{
+  text-align: left;
+  margin-top: 1rem;
+  color: #000;
+}
+
+a{
+  text-decoration: none;
+  color: #f00;
+}
+
+a:hover{
+  color: rgba(255, 85, 85, 0.581);
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  list-style: none;
 }
 
 main{
@@ -18,6 +47,7 @@ main{
   height: 100vh;
   margin-top: 2.5rem;
 }
+
 
 #btns-container{
   display: flex;
@@ -94,3 +124,28 @@ button:hover{
 
 
 /* Card */
+
+
+
+
+
+/* Components List */
+#main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+#components-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+
+
+}
